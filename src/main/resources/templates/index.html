@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" th:replace="~{layout :: layout (~{::title}, ~{::section})}">
+<head>
+  <meta charset="ISO-8859-1">
+  <title th:text="${pagetitle}">wishlist</title>
+</head>
+<body class="center-all">
+
+<section>
+  <div>
+    <h1 th:text="${pagetitle}"></h1>
+  </div>
+  <div>
+    <div class="rendered-home-panel" th:utext="${mdHtmlContent}"></div>
+  </div>
+</section>
+</body>
+</html>

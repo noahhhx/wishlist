@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: wishlist
+  security:
+    user:
+      name: ${WISHLIST_USERNAME}
+      password: ${WISHLIST_PASSWORD}
+
+wishlist:
+  title: ${WISHLIST_TITLE}
+  markdown-path: ${WISHLIST_MARKDOWN-PATH}

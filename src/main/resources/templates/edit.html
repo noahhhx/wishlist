@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" th:replace="~{layout :: layout (~{::title}, ~{::section})}">
+<head>
+  <meta charset="ISO-8859-1">
+  <title th:text="${pagetitle}">wishlist</title>
+</head>
+<body class="center-all">
+
+<section>
+  <div>
+    <h1>edit</h1>
+  </div>
+  <form th:action="@{edit}" th:object="${rawContent}" method="post">
+    <div class="content-container">
+      <div class="content-panel">
+        <h2>Raw Content</h2>
+        <label>
+          <textarea name="rawContent"
+                    class="text-area"
+                    th:text="${rawContent}"
+                    hx-post="/edit/preview"
+                    hx-trigger="keyup changed delay:500ms"
+                    hx-target="#rendered-preview"
+                    hx-swap="innerHTML"></textarea>
+        </label>
+      </div>
+      <div class="content-panel">
+        <h2>Rendered Content</h2>
+        <div id="rendered-preview" class="rendered-panel" th:utext="${renderedContent}"></div>
+      </div>
+    </div>
+    <button type="submit">save</button>
+  </form>
+</section>
+</body>
+</html>

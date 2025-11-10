@@ -1,0 +1,14 @@
+services:
+  wishlist:
+    image: wishlist
+    container_name: wishlist
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/noah/dev:/markdown # Mount to a location if you want to access the file.
+    restart: 'unless-stopped'
+    environment:
+      - WISHLIST_USERNAME=noah
+      - WISHLIST_PASSWORD=password
+      - WISHLIST_TITLE=wishlist
+      - WISHLIST_MARKDOWN-PATH=/markdown/file.md # Should match the above volume entry

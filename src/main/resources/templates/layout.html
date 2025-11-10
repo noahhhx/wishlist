@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" th:fragment="layout (title, content)">
+<head>
+  <meta charset="UTF-8">
+  <title th:replace="${title}">wishlist</title>
+  
+  <!-- Common CSS -->
+  <link rel="stylesheet" th:href="@{/css/main.css}">
+
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"
+          integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ"
+          crossorigin="anonymous"></script>
+
+</head>
+<body class="center-all">
+<header>
+  <!-- Shared header/nav -->
+</header>
+
+<main th:replace="${content}" class="center-all">
+  <p>No content</p>
+</main>
+
+<footer>
+  <!-- Shared footer -->
+</footer>
+</body>
+</html>
