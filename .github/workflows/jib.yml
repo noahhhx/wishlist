@@ -36,4 +36,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push container with Jib
-        run: mvn compile jib:build
+        run: ./mvnw compile jib:build
