@@ -10,5 +10,5 @@ wishlist:
   title: ${WISHLIST_TITLE}
   markdown-path: ${WISHLIST_MARKDOWN-PATH}
   custom-css-dir: ${WISHLIST_CUSTOM-CSS-DIR:}
-  custom-css-cache-period: ${WISHLIST_CUSTOM-CSS-CACHE-PERIOD:}
+  custom-css-cache-period: ${WISHLIST_CUSTOM-CSS-CACHE-PERIOD:3600}
   custom-fav-icon: ${WISHLIST_CUSTOM-FAV-ICON:}
